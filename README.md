@@ -17,6 +17,7 @@ Welcome to Codeway Fullstack Case! This project showcases a full-stack web appli
 - Firebase Admin: Provides access to Firebase services on the server.
 - Cors: Middleware for enabling Cross-Origin Resource Sharing.
 - Firebase Firestore Databse
+- Runs on port 3000
   
 ### Frontend (Vue.js)
 
@@ -25,6 +26,7 @@ Welcome to Codeway Fullstack Case! This project showcases a full-stack web appli
 - Vue Router: A routing library for Vue.js applications.
 - Axios: A promise-based HTTP client for making API requests.
 - Firebase Authentication: Provides secure user authentication.
+- Runs on port 8080
 
 ## Firebase Overview
 Link: https://console.firebase.google.com/u/2/project/codewayfullstackcase/overview
@@ -89,6 +91,11 @@ Here's the document schema:
 2. Upload the contents of the `dist` folder to your frontend hosting provider.
 
 3. Set up Firebase Authentication and Firestore rules as needed for security.
+
+##TROUBLESHOOTING
+- Check the needed ports are empty (3000 for the backend and 8080 for the frontend)
+- If they are being used by another process, either kill that process or change the projects ports
+- Restart the project
 
 ## PURPOSE
 This project is developed for the case study given by Codeway to Ahmet Bahadır Özer. And the only person responsible for the development is solely him.

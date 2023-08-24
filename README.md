@@ -16,6 +16,7 @@ Welcome to Codeway Fullstack Case! This project showcases a full-stack web appli
 - Express: A fast, unopinionated, minimalist web framework for Node.js.
 - Firebase Admin: Provides access to Firebase services on the server.
 - Cors: Middleware for enabling Cross-Origin Resource Sharing.
+- Firebase Firestore Databse
   
 ### Frontend (Vue.js)
 
@@ -25,25 +26,43 @@ Welcome to Codeway Fullstack Case! This project showcases a full-stack web appli
 - Axios: A promise-based HTTP client for making API requests.
 - Firebase Authentication: Provides secure user authentication.
 
+## Firebase Overview
+Link: https://console.firebase.google.com/u/2/project/codewayfullstackcase/overview
+There is a collection named "configFiles" in the database and that is the one being used in the project.
+There is a single document with an auto generated id and various property and value pairs.
+Here's the document schema: 
+[
+  {
+    id: 'z5vJ2coDnhUQZeeUb5ju',
+    btnText: 'Try Now!',
+    minimumVersion: '1.01',
+    latestVersion: '2.11',
+    privacyPage: 'https://codeway.com/privacy_en.html',
+    supportEmail: 'support@codeway.co',
+    compressionQuality: '0.9',
+    freeUsageLimit: '7'
+  }
+]
+
 ## Backend Setup
 
 1. Clone the repository to your local machine.
 2. Navigate to the backend directory: `cd server`.
 3. Install dependencies: `npm install`.
-4. Replace the `codewayfullstackcase-firebase-adminsdk-juy9q-cf7c6ec395.json` file with your Firebase Admin SDK service account JSON.
+4. Make sure you have Firebase Admin SDK service account JSON. (i.e. `codewayfullstackcase-firebase-adminsdk-juy9q-cf7c6ec395.json`)
 5. Start the backend server: `npm start`.
 
 ## Frontend Setup
 
 1. Navigate to the frontend directory: `cd frontend`.
 2. Install dependencies: `npm install`.
-3. Replace the Firebase configuration in `src/firebase/index.js` with your own Firebase configuration.
+3. Make sure you have the correct Firebase configuration in `src/firebase/index.js`
 4. Start the frontend development server: `npm run serve`.
 
 ## Usage
 
 1. Open your web browser and navigate to `http://localhost:8080` (or as indicated in the terminal).
-2. Sign in using your Firebase account or create a new account.
+2. Sign in using either (email: codeway@codeway.co , password: codeway) or (email: test@test.com , password: testpassword)
 3. In the HomeView, you can manage configuration files by editing, adding, or deleting properties.
 
 ## API Endpoints
@@ -71,17 +90,5 @@ Welcome to Codeway Fullstack Case! This project showcases a full-stack web appli
 
 3. Set up Firebase Authentication and Firestore rules as needed for security.
 
-## Contributing
-
-Contributions to this project are welcome! If you find a bug, want to suggest an enhancement, or want to contribute in any way, feel free to open an issue or submit a pull request.
-
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
----
-
-This README provides an overview of the project structure, setup instructions, features, and technologies used in both the frontend and backend. For detailed code explanations and implementation details, refer to the source code files.
-
-For any questions or assistance, please contact [Your Name](mailto:your@email.com).
-
+## PURPOSE
+This project is developed for the case study given by Codeway to Ahmet Bahadır Özer. And the only person responsible for the development is solely him.

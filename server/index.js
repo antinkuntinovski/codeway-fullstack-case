@@ -4,7 +4,7 @@ const admin = require('firebase-admin');
 const serviceAccount = require('./codewayfullstackcase-firebase-adminsdk-juy9q-cf7c6ec395.json');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),

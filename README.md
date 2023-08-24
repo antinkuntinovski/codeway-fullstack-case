@@ -11,8 +11,8 @@ A web application for managing configuration files with authentication and real-
 
 ## Installation
 
-1. Clone the repository: `git clone https://gitlab.com/your-username/your-project.git`
-2. Navigate to the project folder: `cd your-project`
+1. Clone the repository: `git clone https://gitlab.com/codeway2/FullstackCase.git`
+2. Navigate to the project folder: `cd FullstackCase`
 3. Install frontend dependencies: `cd frontend && npm install`
 4. Install backend dependencies: `cd backend && npm install`
 

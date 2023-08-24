@@ -16,7 +16,10 @@ export default createStore({
 
     CLEAR_USER (state) {
       state.user = null
-    }
+    },
+    SET_ID_TOKEN(state, token) {
+      state.idToken = token;
+    },
 
   },
   actions: {
@@ -84,18 +87,20 @@ export default createStore({
       router.push('/login')
     },
 
-    fetchUser ({ commit }) {
+    fetchUser({ commit }) {
       auth.onAuthStateChanged(async user => {
         if (user === null) {
-          commit('CLEAR_USER')
+          commit('CLEAR_USER');
+          commit('SET_ID_TOKEN', null); // Add this line
         } else {
-          commit('SET_USER', user)
+          commit('SET_USER', user);
+          commit('SET_ID_TOKEN', await user.getIdToken()); // Add this line
 
           if (router.isReady() && router.currentRoute.value.path === '/login') {
-            router.push('/')
+            router.push('/');
           }
         }
-      })
+      });
     }
     
   }

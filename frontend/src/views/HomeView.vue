@@ -107,11 +107,17 @@ export default {
     const newValue = ref(''); 
 
     const sendAuthorizedRequest = async (method, url, data) => {
+      const idToken = store.state.idToken;
+
+      if (!idToken) {
+        throw new Error('No Firebase ID token available.');
+      }
+
       const config = {
         method,
         url,
         headers: {
-          Authorization: `Bearer ${user.value.getIdToken()}`, // Include the Firebase ID token
+          Authorization: `Bearer ${idToken}`, // Include the Firebase ID token
         },
         data,
       };
@@ -172,8 +178,8 @@ export default {
     };
     onMounted(async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/files');
-        items.value = response.data;
+        await store.dispatch('fetchUser');
+        await fetchItems();
       } catch (error) {
         console.error('Error fetching items:', error);
       }
